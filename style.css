@@ -1,8 +1,16 @@
 
 .preview-window {
     overflow: auto;
-    height: 500px;
+    height: 400px;
     width: 860px;
     background-color:lightskyblue;
+    border: 2px black solid;
+}
+
+.lte-latest-status-preview-window {
+    overflow: auto;
+    height: 20px;
+    width: 860px;
+    background-color:mediumaquamarine;
     border: 2px black solid;
 }
