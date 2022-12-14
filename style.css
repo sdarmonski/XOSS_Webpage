@@ -1,8 +1,31 @@
 
-.preview-window {
+.grid-container {
+    display: grid;
+    column-gap: 10px;
+}
+
+.item1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.item2 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+.preview-log-window {
     overflow: auto;
     height: 400px;
     width: 860px;
+    background-color:lightskyblue;
+    border: 2px black solid;
+}
+
+.preview-uav-status-window {
+    overflow: auto;
+    height: 400px;
+    width: 500px;
     background-color:lightskyblue;
     border: 2px black solid;
 }

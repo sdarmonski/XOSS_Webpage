@@ -2,9 +2,10 @@
 <html>
   <!-- Page styling -->
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" href="#">
   <body>
     <h1><center>XOSS Unmanned System Webpage</center></h1>
-    <!--p>Paragraph text goes here</p-->
+
     <div class="form-select-log">
       <form>
         Select log to view:
@@ -14,13 +15,27 @@
       </form>
       <script src="js/log-suggestions.js"></script>
     </div>
-    <div>
-      <button id="fetch-log-btn">Display Log</button>
-      <pre id="preview-log" class="preview-window"></pre>
-      LTE latest status:
-      <pre id="lte-latest-status" class="lte-latest-status-preview-window"></pre>
-      <!--embed src="sample.txt"-->
-      <script src="js/fetch-log.js"></script>
+
+    <div class="grid-container">
+      <div class="item1">
+        <div>
+          <button id="fetch-log-btn">Display Log</button>
+          <pre id="preview-log" class="preview-log-window"></pre>
+          LTE latest status:
+          <pre id="lte-latest-status" class="lte-latest-status-preview-window"></pre>
+          <script src="js/fetch-log.js"></script>
+        </div>
+      </div>
+      
+      <div class="item2">
+        <div>
+          <button id="fetch-status-btn">Display UAV Status</button>
+          <pre id="preview-uav-status" class="preview-uav-status-window"></pre>
+          <script src="js/fetch-uav-status.js"></script>
+        </div>
+      </div>
     </div>
+
+    <!-- footer><center>Footer text goes here</center></footer -->
   </body>
 </html>

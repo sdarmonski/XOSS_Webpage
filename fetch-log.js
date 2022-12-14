@@ -1,6 +1,6 @@
 
 let logging_started = false;
-var intervalId;
+var logging_intervalId;
 
 document.querySelector("#fetch-log-btn").addEventListener('click', async function ()
 {
@@ -12,7 +12,7 @@ document.querySelector("#fetch-log-btn").addEventListener('click', async functio
             document.getElementById("fetch-log-btn").textContent = "Stop Logging";
             document.querySelector("#preview-log").textContent = "Logging started. Waiting for data...";
             document.querySelector("#lte-latest-status").textContent = "Logging started. Waiting for data...";
-            intervalId = setInterval( async function()
+            logging_intervalId = setInterval( async function()
             {
                 try
                 {
@@ -78,7 +78,7 @@ async function fetchLTElatestStatus()
 function stopLogging()
 {
     logging_started = false;
-    clearInterval(intervalId);
+    clearInterval(logging_intervalId);
     document.getElementById("fetch-log-btn").textContent = "Display Log";
     document.querySelector("#preview-log").textContent = "Logging stopped.";
     document.querySelector("#lte-latest-status").textContent = "Logging stopped.";
